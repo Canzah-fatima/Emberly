@@ -1,0 +1,281 @@
+# =========================================================
+# EMBERLY - GITIGNORE
+# =========================================================
+
+
+# =========================================================
+# DEPENDENCIES
+# =========================================================
+
+node_modules/
+**/node_modules/
+
+.pnpm-store/
+.npm/
+.yarn/
+.yarn-cache/
+.yarn-integrity
+
+
+# =========================================================
+# ENVIRONMENT / SECRETS
+# =========================================================
+
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.template
+!**/.env.sample
+
+
+# =========================================================
+# DOCUMENTATION / PRIVATE PROJECT FILES
+# =========================================================
+
+docs/
+**/docs/
+
+
+# =========================================================
+# BUILD OUTPUT
+# =========================================================
+
+dist/
+**/dist/
+
+build/
+**/build/
+
+out/
+**/out/
+
+.vite/
+**/.vite/
+
+.cache/
+**/.cache/
+
+
+# =========================================================
+# SQLITE / LOCAL DATABASE FILES
+# =========================================================
+
+*.db
+*.db-shm
+*.db-wal
+
+*.sqlite
+*.sqlite3
+
+*.sqlite-shm
+*.sqlite-wal
+
+
+# =========================================================
+# LOGS
+# =========================================================
+
+*.log
+*.log.*
+
+logs/
+**/logs/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+lerna-debug.log*
+
+
+# =========================================================
+# LOCAL UPLOADS / USER GENERATED FILES
+# =========================================================
+
+uploads/
+**/uploads/
+
+storage/
+**/storage/
+
+media/
+**/media/
+
+user-uploads/
+**/user-uploads/
+
+generated/
+**/generated/
+
+
+# =========================================================
+# TEMPORARY FILES
+# =========================================================
+
+tmp/
+**/tmp/
+
+temp/
+**/temp/
+
+.tmp/
+**/.tmp/
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+*.old
+
+
+# =========================================================
+# TEST / COVERAGE OUTPUT
+# =========================================================
+
+coverage/
+**/coverage/
+
+.nyc_output/
+**/.nyc_output/
+
+test-results/
+**/test-results/
+
+playwright-report/
+**/playwright-report/
+
+
+# =========================================================
+# TYPESCRIPT
+# =========================================================
+
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+
+# =========================================================
+# ESLINT / TOOLING CACHE
+# =========================================================
+
+.eslintcache
+**/.eslintcache
+
+.stylelintcache
+**/.stylelintcache
+
+.prettier-cache
+**/.prettier-cache
+
+
+# =========================================================
+# IDE / EDITORS
+# =========================================================
+
+.idea/
+*.iml
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+.history/
+**/.history/
+
+*.sublime-project
+*.sublime-workspace
+
+
+# =========================================================
+# OPERATING SYSTEM FILES
+# =========================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+$RECYCLE.BIN/
+
+.directory
+.Trash-*
+
+
+# =========================================================
+# ARCHIVES
+# =========================================================
+
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+
+
+# =========================================================
+# VITE GENERATED / TEMP FILES
+# =========================================================
+
+vite.config.*.timestamp-*
+**/vite.config.*.timestamp-*
+
+
+# =========================================================
+# DEBUG / PROFILING
+# =========================================================
+
+*.cpuprofile
+*.heapprofile
+*.pid
+*.pid.lock
+
+pids/
+**/pids/
+
+
+# =========================================================
+# GENERATED STATIC FILES
+# =========================================================
+
+public/generated/
+**/public/generated/
+
+public/uploads/
+**/public/uploads/
+
+
+# =========================================================
+# LOCAL CERTIFICATES / PRIVATE KEYS
+# =========================================================
+
+*.pem
+*.key
+*.crt
+*.cer
+
+
+# =========================================================
+# MISCELLANEOUS
+# =========================================================
+
+*.stackdump
+*.rej
+
+.DS_Store
+
+migrate.py

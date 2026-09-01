@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emberly-navy: #0C3249;
+  --color-emberly-navy-deep: #08283B;
+  --color-emberly-navy-soft: #16445E;
+  --color-emberly-crimson: #C11720;
+  --color-emberly-crimson-dark: #99131A;
+  --color-emberly-crimson-soft: #E05A61;
+  --color-emberly-blue: #679CBC;
+  --color-emberly-blue-soft: #A9C9D9;
+  --color-emberly-ivory: #FFF1D6;
+  --color-emberly-white: #FFFFFF;
+  --color-emberly-ink: #102B39;
+  --font-display: Fraunces, ui-serif, Georgia, serif;
+  --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Emberly semantic tokens. Components should consume these instead of
+     inventing new colors. */
+  --emberly-navy: #0C3249;
+  --emberly-navy-deep: #08283B;
+  --emberly-navy-soft: #16445E;
+  --emberly-crimson: #C11720;
+  --emberly-crimson-dark: #99131A;
+  --emberly-crimson-soft: #E05A61;
+  --emberly-blue: #679CBC;
+  --emberly-blue-soft: #A9C9D9;
+  --emberly-ivory: #FFF1D6;
+  --emberly-white: #FFFFFF;
+  --emberly-ink: #102B39;
+  --emberly-line: rgba(255, 241, 214, 0.14);
+  --emberly-line-strong: rgba(255, 241, 214, 0.24);
+  --emberly-muted: rgba(255, 241, 214, 0.62);
+
+  --color-danger: #EF8085;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  background: var(--emberly-navy-deep);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 82% -8%, rgba(103, 156, 188, 0.16), transparent 30rem),
+    var(--emberly-navy);
+  color: var(--emberly-ivory);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--emberly-crimson);
+  color: var(--emberly-ivory);
+}
+
+:focus-visible {
+  outline: 2px solid var(--emberly-blue);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--emberly-navy-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid var(--emberly-navy-deep);
+  border-radius: 999px;
+  background: var(--emberly-blue);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+
+/* Responsive media guardrails: media never creates horizontal page overflow. */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  min-width: 0;
+}
+
+
+/* Performance guardrails for long, media-heavy views. Keep content measurable
+   so off-screen feed items can be skipped without causing layout jumps. */
+.emberly-feed-item {
+  content-visibility: auto;
+  contain-intrinsic-size: 680px;
+}
+
+.emberly-media-grid > * {
+  contain: layout paint;
+}
+
+@media (prefers-reduced-data: reduce) {
+  video {
+    content-visibility: auto;
+  }
+}
